@@ -132,6 +132,15 @@ Select the checkbox "**Deliver to Amazon S3**", select the Amazon S3 bucket wher
 
 ### ALL SET!
 
+The AWS Glue Table is partitioned by:
+- Cluster
+    - Broker
+        - Date
+
+Allowing **performant** queries by filtering these attributes.
+
 Now the logs are queryable through Amazon Athena. Try it yourself :)
 
 ![docs/athena-query.png](docs/athena-query.png)
+
+
