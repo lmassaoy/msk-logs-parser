@@ -144,3 +144,25 @@ Now the logs are queryable through Amazon Athena. Try it yourself :)
 ![docs/athena-query.png](docs/athena-query.png)
 
 
+## Deleting the Resources
+
+If you want to remove the resources created by this stack, perform the following tasks:
+
+1. Disable the logs delivery from MSK brokers
+2. Remove the event notification from your bucket
+3. Run the shell script below to delete the CloudFormation Stack, removing the AWS Lambda function and its IAM role
+
+```
+% sh infra-as-code/destroy.sh 
+```
+
+**Output**:
+```
+        Are you sure you want to delete the stack msk-logs-parser in the region <YOUR_REGION> ? [y/N]: y
+        Do you want to delete the template file edd02d1e2db6d49cd386958493e286ad.template in S3? [y/N]: y
+        - Deleting S3 object with key 4073a857866f987fe1a0625e3bba9031
+        - Could not find and delete the S3 object with the key edd02d1e2db6d49cd386958493e286ad.template
+        - Deleting Cloudformation stack msk-logs-parser
+
+Deleted successfully
+```
