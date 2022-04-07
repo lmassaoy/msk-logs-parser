@@ -1,3 +1,9 @@
+# Private files
+infra-as-code/packaged.yaml
+infra-as-code/destroy_lyamada.sh
+infra-as-code/deploy_lyamada.sh
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
